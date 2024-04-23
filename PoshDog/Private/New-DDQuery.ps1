@@ -94,7 +94,7 @@ function New-DDQuery {
             $key_string += (Get-DDKey -ApplicationKey -ErrorAction Stop)
         }
 
-        $dd_url = "https://app.datadoghq.com/api/" + $APIVersion + $Endpoint + $key_string
+        $dd_url = "https://app.datadoghq.eu/api/" + $APIVersion + $Endpoint + $key_string
         
         Try {
             $result = Invoke-RestMethod -Method $Method -Uri $dd_url -ContentType "application/json" -Body $Body
